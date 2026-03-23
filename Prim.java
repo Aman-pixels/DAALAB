@@ -18,9 +18,12 @@ public class Prim {
 
         Scanner sc=new Scanner(System.in);
 
+        System.out.println("Enter number of vertices:");
         int n=sc.nextInt();
 
         int graph[][]=new int[n][n];
+
+        System.out.println("Enter adjacency matrix:");
 
         for(int i=0;i<n;i++)
             for(int j=0;j<n;j++)
@@ -54,6 +57,8 @@ public class Prim {
         long end=System.nanoTime();
 
         int cost=0;
+
+        System.out.println("Edges in MST:");
 
         for(int i=1;i<n;i++){
             System.out.println(parent[i]+" - "+i+" : "+graph[i][parent[i]]);

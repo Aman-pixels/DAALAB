@@ -2,11 +2,11 @@ import java.util.*;
 
 public class Dijkstra {
 
-    static int minDistance(int dist[], boolean visited[], int n){
-        int min=Integer.MAX_VALUE, index=-1;
+    static int minDistance(int dist[],boolean visited[],int n){
+        int min=Integer.MAX_VALUE,index=-1;
 
         for(int i=0;i<n;i++){
-            if(!visited[i] && dist[i]<=min){
+            if(!visited[i] && dist[i]<min){
                 min=dist[i];
                 index=i;
             }
@@ -14,18 +14,22 @@ public class Dijkstra {
         return index;
     }
 
-    public static void main(String[] args){
+    public static void main(String args[]){
 
         Scanner sc=new Scanner(System.in);
 
+        System.out.println("Enter number of vertices:");
         int n=sc.nextInt();
 
         int graph[][]=new int[n][n];
+
+        System.out.println("Enter adjacency matrix:");
 
         for(int i=0;i<n;i++)
             for(int j=0;j<n;j++)
                 graph[i][j]=sc.nextInt();
 
+        System.out.println("Enter source vertex:");
         int src=sc.nextInt();
 
         int dist[]=new int[n];
@@ -51,6 +55,8 @@ public class Dijkstra {
         }
 
         long end=System.nanoTime();
+
+        System.out.println("Shortest distances:");
 
         for(int i=0;i<n;i++)
             System.out.println(src+" -> "+i+" = "+dist[i]);

@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Stable {
 
-    static boolean prefers(int[][] womenPref, int w, int m, int m1, int n){
+    static boolean prefers(int[][] womenPref,int w,int m,int m1,int n){
         for(int i=0;i<n;i++){
             if(womenPref[w][i]==m) return true;
             if(womenPref[w][i]==m1) return false;
@@ -10,27 +10,27 @@ public class Stable {
         return false;
     }
 
-    public static void main(String[] args){
+    public static void main(String args[]){
 
         Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter number of men/women:");
         int n=sc.nextInt();
 
         int menPref[][]=new int[n][n];
         int womenPref[][]=new int[n][n];
 
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                char c=sc.next().charAt(0);
-                menPref[i][j]=c-'W';
-            }
-        }
+        System.out.println("Enter men's preference list:");
 
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                char c=sc.next().charAt(0);
-                womenPref[i][j]=c-'A';
-            }
-        }
+        for(int i=0;i<n;i++)
+            for(int j=0;j<n;j++)
+                menPref[i][j]=sc.nextInt();
+
+        System.out.println("Enter women's preference list:");
+
+        for(int i=0;i<n;i++)
+            for(int j=0;j<n;j++)
+                womenPref[i][j]=sc.nextInt();
 
         int womenPartner[]=new int[n];
         boolean menFree[]=new boolean[n];
@@ -39,6 +39,8 @@ public class Stable {
         Arrays.fill(womenPartner,-1);
 
         int freeCount=n;
+
+        long start=System.nanoTime();
 
         while(freeCount>0){
 
@@ -57,7 +59,6 @@ public class Stable {
             }
 
             else{
-
                 int m1=womenPartner[w];
 
                 if(prefers(womenPref,w,m,m1,n)){
@@ -68,7 +69,13 @@ public class Stable {
             }
         }
 
+        long end=System.nanoTime();
+
+        System.out.println("Stable Matching:");
+
         for(int i=0;i<n;i++)
-            System.out.println((char)(womenPartner[i]+'A')+" - "+(char)(i+'W'));
+            System.out.println("Man "+womenPartner[i]+" - Woman "+i);
+
+        System.out.println("Execution Time: "+(end-start)+" ns");
     }
 }
