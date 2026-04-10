@@ -1,0 +1,22 @@
+The Room of Requirement ritCTF{room_of_requirement_found} 
+web exploitation flag{golden_snitch_secret} 
+The Colours of Hogwarts ritCTF{phoenix_order_rises} 
+The_Journey_to_Riddles_Diary ritCTF{gaunts_ring_horcrux_shattered_by_dumb
+ledore} 
+The Mysterious Staircase ritCTF{the_stairs_lead_to_forbidden_area} 
+Fragment of a Divided Soul ritCTF{114_105_110_103} 
+The Sealed Horcrux ritCTF{first_horcrux_destroyed} 
+Hermione’s Secret Message ritCTF{mysterious_stairs_are_in_danger} 
+The Restricted Section Vault ritCTF{restricted_magic_unlocked} 
+The Marauder’s Hidden Message ritCTF{forbidden_magic_revealed} 
+The Owl Network Intercept ritCTF{xss_magic_unlocked} 
+NEXUS GATE ritCTF{second_guessing_yourself_or_confidenc
+e_issue} 
+Room of Requirement ritCTF{room_reveals_truth} 
+Hedwig’s Opaque Delivery ritCTF{hedwig_never_delivers_plain_text} 
+The Ministry Archives ritCTF{ministry_idor_exploit_9471} 
+The Tale Beyond the Brother ritCTF{resurrection_stone} 
+The Enchanted Vault ritCTF{g00d_that_herm0ine_thought_m3_th3_al
+0h0ra_spell} 
+Hogwarts Staff Portal ritCTF{never_trust_client_side_cookies} 
+the owl post system ritCTF{0wl_p0st_ID0R_m1sch13f} 
